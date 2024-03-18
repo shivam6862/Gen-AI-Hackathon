@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+  z-index: 2;
+}
+.box {
+  position: relative;
+  width: -webkit-fill-available;
+}
+.box > label {
+  position: absolute;
+  font-size: var(--ft-400);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--light-white-color);
+  background-color: var(--bg-primary);
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.box > input,
+.box > textarea {
+  font-size: var(--ft-400);
+  outline: none;
+  border: 1px solid var(--light-white-color);
+  border-radius: var(--br-400);
+  padding: var(--pd-400) var(--pd-300);
+  color: var(--light-white-color);
+  transition: 0.1s ease-out;
+  width: -webkit-fill-available;
+  background-color: var(--bg-primary);
+}
+.box > textarea {
+  max-width: 100%;
+  max-height: 250px;
+  min-height: 70px;
+}
+.box > input:focus,
+.box > textarea:focus {
+  border-color: var(--primary-color);
+}
+.box > input:focus + label,
+.box > textarea:focus + label {
+  color: var(--primary-color);
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+  background-color: var(--bg-primary);
+}
+.box > input:not(:placeholder-shown) + label,
+.box > textarea:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+  background-color: var(--bg-primary);
+}
+.box > label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.error {
+  color: var(--light-warn-color);
+}

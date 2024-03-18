@@ -11,6 +11,7 @@ body {
   margin: auto;
   position: relative;
   scroll-behavior: smooth;
+  padding-bottom: 0.5rem;
 }
 a {
   display: block;
