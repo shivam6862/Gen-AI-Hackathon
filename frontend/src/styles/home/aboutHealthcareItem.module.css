@@ -1,0 +1,123 @@
+.servicesItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  width: -webkit-fill-available;
+  gap: 2rem;
+}
+.servicesItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.servicesItemImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 700px;
+  width: -webkit-fill-available;
+  background-color: var(--light-white-color);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.servicesItemHeading > h1 {
+  font-size: var(--ft-600);
+  font-weight: 700;
+  color: var(--black-color);
+  margin-bottom: 1rem;
+  width: -webkit-fill-available;
+  text-align: center;
+}
+.servicesItemAbout > p {
+  font-size: var(--ft-400);
+  font-weight: 400;
+  color: var(--light-black-color);
+  margin-bottom: 1rem;
+}
+.servicesItemThreeKeyPoints > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+}
+.servicesItemThreeKeyPoints > ul > li > svg {
+  width: var(--ft-500);
+  height: var(--ft-500);
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+  opacity: 0.75;
+}
+.servicesItemThreeKeyPoints > ul > li {
+  font-size: var(--ft-400);
+  font-weight: 400;
+  color: var(--light-black-color);
+  margin-bottom: 0.7rem;
+}
+.servicesItemShortMotivation > p {
+  font-size: var(--ft-400);
+  font-weight: 400;
+  color: var(--light-black-color);
+  margin-bottom: 1rem;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  background-color: rgba(67, 185, 127, 0.75);
+  border-radius: 0.7rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--btn-color);
+}
+@media screen and (max-width: 900px) {
+  .servicesItem {
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .servicesItem:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .servicesItemAbout > p {
+    font-size: var(--ft-300);
+  }
+  .servicesItemThreeKeyPoints > ul > li {
+    font-size: var(--ft-300);
+    margin-bottom: 0.2rem;
+  }
+  .servicesItemShortMotivation > p {
+    font-size: var(--ft-300);
+  }
+  .servicesItemThreeKeyPoints > ul > li > svg {
+    width: var(--ft-350);
+    height: var(--ft-350);
+  }
+  .button {
+    padding: 0.5rem 0.7rem;
+    font-size: var(--ft-350);
+    border-radius: 0.4rem;
+  }
+}

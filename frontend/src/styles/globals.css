@@ -9,9 +9,6 @@ body {
   background-color: var(--bg-primary);
   max-width: 1800px;
   margin: auto;
-  position: relative;
-  scroll-behavior: smooth;
-  padding-bottom: 0.5rem;
 }
 a {
   display: block;
@@ -24,9 +21,9 @@ a {
 
 :root {
   /* COLOR OF SITE */
-  --primary-color: rgb(62, 205, 213);
-  --secondary-color: rgb(31, 122, 127);
-  --tertiary-color: rgb(8, 59, 61);
+  --primary-color: #43b97f;
+  --secondary-color: #295943;
+  --tertiary-color: #153530;
 
   --title-color: #3d3e48;
   --para-color: #a8a7ab;
@@ -41,14 +38,7 @@ a {
   --light-white-color: #f5f5f5;
   --light-black-color: #444;
 
-  --user-bg: #2f2f2f;
-  --model-bg: #1f1f1f;
-  --message-color: #ececec;
-  --message-user-color: #f5f5f5;
-  --toogle-button-bg: #9b9b9b;
-  --link-hover: #d1d1d1;
-
-  --bg-primary: #212121;
+  --bg-primary: #ffffff;
 
   --btn-color: #43b97f;
   --btn-active-color: #295943;

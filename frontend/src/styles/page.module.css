@@ -7,13 +7,82 @@
 }
 .box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0rem 1rem;
   font-size: 1rem;
+  max-width: 90vw;
   width: -webkit-fill-available;
-  min-height: 100vh;
-  font-size: 2rem;
-  color: var(--primary-color);
+  gap: 2rem;
+}
+.top-image {
+  width: -webkit-fill-available;
+  position: relative;
+}
+.top-image img {
+  width: 100%;
+  height: 90vh;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px var(--br-600) var(--br-600);
+  background-image: url("/image/clouds.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.about-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+.about-heading > h1 {
+  font-size: var(--ft-1000);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: wrap;
+}
+.about-heading > h2 {
+  font-size: var(--ft-800);
+  color: var(--white-color);
+  text-shadow: var(--text-shadow);
+  text-align: center;
   text-transform: capitalize;
+  white-space: wrap;
+}
+
+@media (max-width: 768px) {
+  .top-image img {
+    height: 80vh;
+  }
+  .about-heading > h1 {
+    font-size: var(--ft-800);
+  }
+  .about-heading > h2 {
+    font-size: var(--ft-600);
+  }
+}
+@media (max-width: 425px) {
+  .top-image img {
+    height: 70vh;
+  }
+  .about-heading > h1 {
+    font-size: var(--ft-600);
+  }
+  .about-heading > h2 {
+    font-size: var(--ft-400);
+  }
 }
