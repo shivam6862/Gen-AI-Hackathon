@@ -14,7 +14,7 @@ def getRoutes(request):
         {'Endpoint': '/genaimech/', 'method': 'GET',
          'body': None, 'description': 'Returns an array of genaimech'},
         {'Endpoint': '/genaimech/', 'method': 'POST',
-            'body': {'name': 'string', 'age': 'integer'}, 'description': 'Creates a new tokentrim'},
+            'body': {'name': 'string', 'age': 'integer'}, 'description': 'Creates a new genaimech'},
 
     ]
     return Response(routes)

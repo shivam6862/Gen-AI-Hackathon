@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: -webkit-fill-available;
+  min-height: 100vh;
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}

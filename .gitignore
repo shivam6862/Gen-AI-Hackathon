@@ -6,3 +6,10 @@ db.sqlite3
 .env
 .next
 GEN-AI.pptx
+
+data.csv
+new_data.csv
+prediction.ipynb
+link.txt
+form.txt
+kaggle.txt
