@@ -1,19 +1,9 @@
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: -webkit-fill-available;
-  min-height: 100vh;
-}
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0rem 1rem;
-  font-size: 1rem;
-  max-width: 90vw;
-  width: -webkit-fill-available;
-  gap: 2rem;
+  min-height: 90vh;
+  padding: 2rem 1rem;
 }

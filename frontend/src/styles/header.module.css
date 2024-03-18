@@ -10,5 +10,6 @@
 .container > a > img {
   width: 38px;
   height: 38px;
+  margin-right: 1rem;
   border-radius: 50%;
 }

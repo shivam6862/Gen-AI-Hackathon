@@ -1,11 +1,10 @@
-"use client";
-import React, { useEffect, useState } from "react";
 import classes from "@/styles/diagnosis.module.css";
+import DiagnosisCategories from "@/components/diagnosis/DiagnosisCategories";
 
 const Page = () => {
   return (
     <div className={classes["container"]}>
-      <div className={classes["box"]}>diagnosis</div>
+      <DiagnosisCategories />
     </div>
   );
 };
