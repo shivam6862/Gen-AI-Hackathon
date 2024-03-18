@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: -webkit-fill-available;
+  padding: 1rem;
+  gap: 0.5rem;
+  color: var(--white-color);
+  background-color: rgb(31, 102, 106);
+  text-transform: capitalize;
+  height: 4.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+}
+.container > a > img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
