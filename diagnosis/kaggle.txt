@@ -1,0 +1,9 @@
+### Kaggle dataset
+
+[Diabetes](https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset)
+
+[Asthma](https://www.kaggle.com/datasets/deepayanthakur/asthma-disease-prediction)
+
+[Stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+
+[Cancer](https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer)

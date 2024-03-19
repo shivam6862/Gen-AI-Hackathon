@@ -6,3 +6,12 @@ db.sqlite3
 .env
 .next
 GEN-AI.pptx
+
+diagnosis/asthma/data.csv
+diagnosis/cancer/data.csv
+diagnosis/diabetes/data.csv
+diagnosis/stroke/data.csv
+diagnosis/asthma/new_data.csv
+diagnosis/cancer/new_data.csv
+diagnosis/diabetes/new_data.csv
+diagnosis/stroke/new_data.csv

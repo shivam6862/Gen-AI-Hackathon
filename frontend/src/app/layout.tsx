@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { NotificationContextProvider } from "@/contexts/Notification-context";
 import Notifications from "@/components/notification/Notifications";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Notifications />
           <Header />
           {children}
+          <Footer />
         </NotificationContextProvider>
       </body>
     </html>

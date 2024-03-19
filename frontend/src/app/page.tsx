@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import classes from "@/styles/page.module.css";
-import CustomInputField from "@/components/CustomInputField";
+import Image from "next/image";
 import { useNotification } from "@/hooks/useNotification";
-import Backdrop from "@/components/Backdrop";
+import AboutHealthcare from "@/components/home/AboutHealthcare";
+import ContactUs from "@/components/home/ContactUs";
 
 export default function Home() {
   const { NotificationHandler } = useNotification();
@@ -15,31 +16,25 @@ export default function Home() {
     );
   }, []);
 
-  const [message, setMessage] = useState<string>("");
-  const [errror, setError] = useState<string>("");
-
   return (
     <div className={classes["container"]}>
-      <div className={classes["box"]}>Home page for the app ...</div>
-      <CustomInputField
-        placeholder="Name"
-        type="text"
-        value={message}
-        id="name"
-        handleChanges={(e) => {
-          setMessage(e.target.value);
-        }}
-        onBlur={() => {
-          if (message.length < 3) {
-            setError("Name should be more than 3 characters");
-          } else {
-            setError("");
-          }
-        }}
-        error={errror}
-        isInput={true}
-      />
-      <Backdrop zIndex={1} />
+      <div className={classes["box"]}>
+        <div className={classes["top-image"]}>
+          <Image
+            src="/image/background.jpg"
+            alt="background"
+            width={1920}
+            height={1080}
+          />
+          <div className={classes["image"]}></div>
+          <div className={classes["about-heading"]}>
+            <h1>Ethical AI in the healthcare</h1>
+            <h2>It could be in diagnosis or recommendation</h2>
+          </div>
+        </div>
+        <AboutHealthcare />
+        <ContactUs />
+      </div>
     </div>
   );
 }

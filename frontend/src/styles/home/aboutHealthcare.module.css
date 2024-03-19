@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  width: -webkit-fill-available;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 1200px;
+  width: -webkit-fill-available;
+}
+.top > h1 {
+  font-size: var(--ft-800);
+  font-weight: 800;
+  color: var(--primary-color);
+}
+.top > p {
+  font-size: var(--ft-400);
+  font-weight: 400;
+  color: var(--light-black-color);
+}
+.servicesItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: -webkit-fill-available;
+}

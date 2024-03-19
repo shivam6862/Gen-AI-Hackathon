@@ -1,0 +1,528 @@
+[
+  {
+    "asthma": {
+      "Tiredness": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Dry-Cough": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Difficulty-in-Breathing": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Sore-Throat": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Pains": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Nasal-Congestion": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "Runny-Nose": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          },
+          {
+            "show": "no",
+            "value": "0"
+          }
+        ]
+      },
+      "gender": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "male",
+            "value": "1"
+          },
+          {
+            "show": "female",
+            "value": "0"
+          }
+        ]
+      },
+      "age": {
+        "type": "number"
+      }
+    }
+  },
+  {
+    "cancer": {
+      "GENDER": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "male",
+            "value": "1"
+          },
+          {
+            "show": "female",
+            "value": "0"
+          }
+        ]
+      },
+      "AGE": {
+        "type": "number"
+      },
+      "SMOKING": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "non-smoker",
+            "value": "0"
+          },
+          {
+            "show": "smoker",
+            "value": "1"
+          }
+        ]
+      },
+      "YELLOW_FINGERS": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "PEER_PRESSURE": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "CHRONIC DISEASE": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "FATIGUE": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "ALLERGY": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "WHEEZING": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "ALCOHOL CONSUMING": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "COUGHING": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "SHORTNESS OF BREATH": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "SWALLOWING DIFFICULTY": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "CHEST PAIN": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "diabetes": {
+      "Pregnancies": {
+        "type": "number"
+      },
+      "Glucose": {
+        "type": "number"
+      },
+      "BloodPressure": {
+        "type": "number"
+      },
+      "SkinThickness": {
+        "type": "number"
+      },
+      "Insulin": {
+        "type": "number"
+      },
+      "BMI": {
+        "type": "number"
+      },
+      "DiabetesPedigreeFunction": {
+        "type": "number"
+      },
+      "Age": {
+        "type": "number"
+      }
+    }
+  },
+  {
+    "stroke": {
+      "gender": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "male",
+            "value": "1"
+          },
+          {
+            "show": "female",
+            "value": "0"
+          },
+          {
+            "show": "other",
+            "value": "2"
+          }
+        ]
+      },
+      "age": {
+        "type": "number"
+      },
+      "hypertension": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "heart_disease": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "ever_married": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "no",
+            "value": "0"
+          },
+          {
+            "show": "yes",
+            "value": "1"
+          }
+        ]
+      },
+      "Residence_type": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "urban",
+            "value": "0"
+          },
+          {
+            "show": "rural",
+            "value": "1"
+          }
+        ]
+      },
+      "avg_glucose_level": {
+        "type": "number"
+      },
+      "bmi": {
+        "type": "number"
+      },
+      "smoking_status": {
+        "type": "dropdown",
+        "option": [
+          {
+            "show": "",
+            "value": ""
+          },
+          {
+            "show": "formerly smoked",
+            "value": "1"
+          },
+          {
+            "show": "never smoked",
+            "value": "0"
+          },
+          {
+            "show": "smokes",
+            "value": "2"
+          },
+          {
+            "show": "unknown",
+            "value": "3"
+          }
+        ]
+      }
+    }
+  }
+]

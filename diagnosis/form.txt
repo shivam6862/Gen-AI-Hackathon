@@ -1,0 +1,92 @@
+1.Asthma
+ 
+FORM
+Tiredness [1 0]
+Dry-Cough [1 0]
+Difficulty-in-Breathing [0 1]
+Sore-Throat [0 1]
+Pains [0 1]
+Nasal-Congestion [1 0]
+Runny-Nose [0 1]
+age [19  9 24 59 60]
+gender [0 1]
+
+INPUT
+['Tiredness', 'Dry-Cough', 'Difficulty-in-Breathing', 'Sore-Throat',
+'Pains', 'Nasal-Congestion', 'Runny-Nose', 'gender', 'age'],
+ [0, 1, 1, 0, 1, 1, 1, 0, 21]
+
+
+
+2. Cancer
+
+FORM
+
+GENDER [1 0]
+AGE [ANY NUMBER]
+SMOKING [0 1]
+YELLOW_FINGERS [1 0]
+PEER_PRESSURE [0 1]
+CHRONIC DISEASE [0 1]
+FATIGUE [1 0]
+ALLERGY [0 1]
+WHEEZING [1 0]
+ALCOHOL CONSUMING [1 0]
+COUGHING [1 0]
+SHORTNESS OF BREATH [1 0]
+SWALLOWING DIFFICULTY [1 0]
+CHEST PAIN [1 0]
+
+INPUT
+
+['GENDER', 'AGE', 'SMOKING', 'YELLOW_FINGERS', 'PEER_PRESSURE',
+'CHRONIC DISEASE', 'FATIGUE', 'ALLERGY', 'WHEEZING',
+'ALCOHOL CONSUMING', 'COUGHING', 'SHORTNESS OF BREATH',
+'SWALLOWING DIFFICULTY', 'CHEST PAIN']
+[1, 21, 2, 2, 1, 2, 2, 0, 2, 1, 0, 2, 1, 1]
+
+
+
+
+
+3.Diabetes 
+
+FORM
+
+Pregnancies [ 6  1  8  0  5  3 10  2  4  7  9 11 13 15 17 12 14]
+Glucose [0 TO 300]
+BloodPressure [ 0 TO 250]
+SkinThickness [0 TO 150]
+Insulin [ ANY NUMBER BETWEEN 0 TO 250]
+BMI [ANY NUMBER BETWEEN 15 TO 60]
+DiabetesPedigreeFunction [ANY NUMBER BETWEEN 0 TO 1.5]
+Age [ANY NUMBER]
+
+INPUT
+['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin',
+'BMI', 'DiabetesPedigreeFunction', 'Age',]
+[6, 148, 72, 35, 0, 33.6, 0.627, 50]
+
+
+
+
+
+4. Stroke
+
+FORM
+
+gender [1 0 2]
+age [ANY NUMBER]
+hypertension [0 1]
+heart_disease [1 0]
+ever_married [1 0]
+Residence_type [1 0]
+avg_glucose_level [ANY NUMBER]
+bmi [15 TO 60 ]
+smoking_status [1 0 2 3]
+
+INPUT
+
+['gender', 'age', 'hypertension', 'heart_disease', 'ever_married',
+'Residence_type', 'avg_glucose_level', 'bmi', 'smoking_status']
+[1, 67.0,	0, 1, 1, 1, 228.69, 36.600000,	1]
