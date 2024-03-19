@@ -81,10 +81,26 @@ WSGI_APPLICATION = 'genaimechbackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+# connect to mongodb database
+HOST = env('HOST')
+DB_USERNAME = env('DB_USERNAME')
+PASSWORD = env('PASSWORD')
+PROJECT_NAME = env('PROJECT_NAME')
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': PROJECT_NAME,
+        'CLIENT': {
+            'host': HOST,
+            'username': DB_USERNAME,
+            'password': PASSWORD,
+        }
     }
 }
 
