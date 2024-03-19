@@ -1,13 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import useFormDiagnosis from "@/hooks/useFormDiagnosis";
 import classes from "@/styles/form/form.module.css";
 
 type Props = {
   formData: any;
+  name: string;
 };
 
-const Form: React.FC<Props> = ({ formData }) => {
+const Form: React.FC<Props> = ({ formData, name }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const { FormDiagnosis } = useFormDiagnosis();
   const [useFormData, setUseFormData] = useState<any>(
     Object.keys(formData).reduce((acc: { [key: string]: any }, key) => {
       acc[key] = "";
@@ -19,14 +22,11 @@ const Form: React.FC<Props> = ({ formData }) => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      console.log(useFormData);
-      setUseFormData(
-        Object.keys(formData).reduce((acc: { [key: string]: any }, key) => {
-          acc[key] = "";
-          return acc;
-        }, {})
+      const values = Object.values(useFormData).map((value: any) =>
+        parseInt(value)
       );
-
+      const response = await FormDiagnosis(name, values);
+      console.log(response);
       setIsLoading(false);
     } catch (err) {
       setIsLoading(false);

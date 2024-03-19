@@ -29,7 +29,7 @@ const Page: React.FC<Props> = ({ params: { name } }) => {
         <div className={classes.middle_background}></div>
         <div className={classes.bottom_form}>
           <div className={classes.box_form}>
-            <Form formData={foundItem ? foundItem[name] : {}} />
+            <Form formData={foundItem ? foundItem[name] : {}} name={name} />
           </div>
         </div>
       </div>

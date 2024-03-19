@@ -38,6 +38,13 @@ a {
   --light-white-color: #f5f5f5;
   --light-black-color: #444;
 
+  --user-bg: #c7c4c4;
+  --model-bg: #d4d2d2;
+  --message-color: #5f5c5c;
+  --message-user-color: #423e3e;
+  --toogle-button-bg: #3d3838;
+  --link-hover: #392f2f;
+
   --bg-primary: #ffffff;
 
   --btn-color: #43b97f;

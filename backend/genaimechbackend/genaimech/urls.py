@@ -10,4 +10,6 @@ urlpatterns = [
     path("genaimech/newchat", views.newchat, name="newchat"),
     path("genaimech/getchat/<str:pk>",
          views.getchat, name="getchat"),
+    path("genaimech/form/<str:diagnosis>/",
+         views.postForm, name="postForm"),
 ]

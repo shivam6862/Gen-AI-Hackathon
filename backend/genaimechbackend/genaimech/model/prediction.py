@@ -10,10 +10,10 @@ import os
 path = os.getcwd()
 print("path", path)
 
-data_asthma = pd.read_csv(path + "\genaimech\model\data\\asthma.csv")
-data_cancer = pd.read_csv(path + "\genaimech\model\data\\cancer.csv")
-data_diabetes = pd.read_csv(path + "\genaimech\model\data\\diabetes.csv")
-data_stroke = pd.read_csv(path + "\genaimech\model\data\\stroke.csv")
+data_asthma = pd.read_csv(path + "/genaimech/model/data/asthma.csv")
+data_cancer = pd.read_csv(path + "/genaimech/model/data/cancer.csv")
+data_diabetes = pd.read_csv(path + "/genaimech/model/data/diabetes.csv")
+data_stroke = pd.read_csv(path + "/genaimech/model/data/stroke.csv")
 
 
 class Model:

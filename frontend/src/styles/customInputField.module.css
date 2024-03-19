@@ -30,7 +30,7 @@
   border: 1px solid var(--light-white-color);
   border-radius: var(--br-400);
   padding: var(--pd-400) var(--pd-300);
-  color: var(--light-white-color);
+  color: var(--light-black-color);
   transition: 0.1s ease-out;
   width: -webkit-fill-available;
   background-color: var(--bg-primary);

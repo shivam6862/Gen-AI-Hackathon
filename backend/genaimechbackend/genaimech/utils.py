@@ -18,6 +18,7 @@ def get_prediction_percentage_asthma(data_of_new_patient):
     prediction_percentage = get_predict_percentage_asthma(
         model, data_of_new_patient)
     return {
+        "type": "Success",
         "response": prediction_percentage
     }
 
@@ -26,6 +27,7 @@ def get_prediction_percentage_cancer(data_of_new_patient):
     prediction_percentage = get_predict_percentage_cancer(
         model, data_of_new_patient)
     return {
+        "type": "Success",
         "response": prediction_percentage
     }
 
@@ -34,6 +36,7 @@ def get_prediction_percentage_diabetes(data_of_new_patient):
     prediction_percentage = get_predict_percentage_diabetes(
         model, data_of_new_patient)
     return {
+        "type": "Success",
         "response": prediction_percentage
     }
 
@@ -42,6 +45,7 @@ def get_prediction_percentage_stroke(data_of_new_patient):
     prediction_percentage = get_predict_percentage_stroke(
         model, data_of_new_patient)
     return {
+        "type": "Success",
         "response": prediction_percentage
     }
 
