@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -webkit-fill-available;
+}
+.form_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: -webkit-fill-available;
+}
+.form_box > h1 {
+  padding: 1rem 0rem 1rem 1rem;
+  margin: 0;
+  font-size: var(--ft-700);
+  text-align: left;
+  color: var(--primary-color);
+}
+.container_form {
+  max-width: 600px;
+  margin: 0 auto;
+  width: -webkit-fill-available;
+}
+.container_form > label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: var(--ft-450);
+  color: var(--light-black-color);
+}
+.container_form > label > input,
+.container_form > label > textarea {
+  all: unset;
+  width: 90%;
+  padding: var(--ft-350);
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: var(--ft-400);
+  cursor: pointer;
+  font-weight: 500;
+}
+.container_form > label > textarea {
+  resize: none;
+  height: 150px;
+}
+.container_form > button {
+  background-color: var(--btn-color);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container_form > button:disabled {
+  background-color: var(--stock);
+  cursor: not-allowed;
+}
+
+.container_form > button:hover {
+  background-color: var(--btn-active-color);
+}
+.container_form > label > select {
+  all: unset;
+  width: 90%;
+  padding: var(--ft-350);
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: var(--ft-400);
+  cursor: pointer;
+  font-weight: 500;
+}
+.container_form > label > select > option {
+  padding: 1rem;
+  font-size: var(--ft-400);
+  cursor: pointer;
+  font-weight: 500;
+}

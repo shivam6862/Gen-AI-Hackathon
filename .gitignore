@@ -7,9 +7,11 @@ db.sqlite3
 .next
 GEN-AI.pptx
 
-data.csv
-new_data.csv
-prediction.ipynb
-link.txt
-form.txt
-kaggle.txt
+diagnosis/asthma/data.csv
+diagnosis/cancer/data.csv
+diagnosis/diabetes/data.csv
+diagnosis/stroke/data.csv
+diagnosis/asthma/new_data.csv
+diagnosis/cancer/new_data.csv
+diagnosis/diabetes/new_data.csv
+diagnosis/stroke/new_data.csv
