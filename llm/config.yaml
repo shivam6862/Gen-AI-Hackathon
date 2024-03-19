@@ -1,0 +1,8 @@
+
+
+
+DATA_PATH : "medalpaca/medical_meadow_wikidoc_patient_information"
+MODEL_PATH : "./final_model"
+ADAPTER_PATH : "./lora_adapters"
+MODEL_CACHE_PATH : "./llm_models"
+
