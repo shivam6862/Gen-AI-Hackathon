@@ -4,7 +4,7 @@ import AboutHealthcareItem from "./AboutHealthcareItem";
 
 const data = [
   {
-    a_tag: "/chat/doctor",
+    a_tag: "/chat/new",
     image: "/image/doctor.jpg",
     heading: "Ethical AI Chat Application for Healthcare Recommendations",
     about:
