@@ -5,6 +5,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from .utils import get_response, post_response, post_chat, get_all_chat, new__chat, get__chat, get_prediction_percentage_asthma, get_prediction_percentage_cancer, get_prediction_percentage_diabetes, get_prediction_percentage_stroke
 
+from .util.auth import insert_signup, user_signin
+
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -15,7 +17,20 @@ def getRoutes(request):
          'body': None, 'description': 'Returns an array of genaimech'},
         {'Endpoint': '/genaimech/', 'method': 'POST',
             'body': {'name': 'string', 'age': 'integer'}, 'description': 'Creates a new genaimech'},
-
+        {'Endpoint': '/chat/<str:pk>/', 'method': 'POST',
+            'body': {'message': 'string'}, 'description': 'Creates a new message in a chat'},
+        {'Endpoint': '/chat/', 'method': 'GET',
+            'body': None, 'description': 'Returns an array of chat'},
+        {'Endpoint': '/chat/', 'method': 'POST',
+            'body': {'chatName': 'string'}, 'description': 'Creates a new chat'},
+        {'Endpoint': '/chat/<str:pk>/', 'method': 'GET',
+            'body': None, 'description': 'Returns a chat with the given id'},
+        {'Endpoint': '/form/<str:diagnosis>/', 'method': 'POST',
+            'body': {'data': 'string'}, 'description': 'Returns the percentage of the diagnosis'},
+        {'Endpoint': '/signup/', 'method': 'POST',
+            'body': {'username': 'string', 'email': 'string', 'password': 'string'}, 'description': 'Creates a new user'},
+        {'Endpoint': '/signin/', 'method': 'POST',
+            'body': {'username': 'string', 'password': 'string'}, 'description': 'Signin a user'},
     ]
     return Response(routes)
 
@@ -66,3 +81,13 @@ def postForm(request, diagnosis):
         return get_response(get_prediction_percentage_stroke(data))
     else:
         return get_response('Invalid diagnosis')
+
+
+@api_view(['POST'])
+def signup(request):
+    return insert_signup(request)
+
+
+@api_view(['POST'])
+def signin(request):
+    return user_signin(request)
