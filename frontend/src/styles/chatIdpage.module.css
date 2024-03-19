@@ -12,7 +12,7 @@
   align-items: center;
   font-size: 1rem;
   width: -webkit-fill-available;
-  min-height: 90vh;
+  min-height: 85vh;
   position: relative;
 }
 .chat-name-form {
@@ -33,7 +33,7 @@
 .left-chat {
   width: -webkit-fill-available;
   display: flex;
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
 }
 .left-chat-container {
@@ -71,7 +71,7 @@
 .right-chat {
   width: -webkit-fill-available;
   flex: 2;
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   padding: 0rem 1rem;
 }
@@ -117,6 +117,7 @@
   line-height: 158.5%;
   max-height: 200px;
   background-color: var(--user-bg);
+  color: var(--light-black-color);
   font-family: Söhne, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Helvetica Neue", Arial,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

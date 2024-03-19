@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .utils import get_response, post_response, post_chat, get_all_chat, new__chat, get__chat
+from .utils import get_response, post_response, post_chat, get_all_chat, new__chat, get__chat, get_prediction_percentage_asthma, get_prediction_percentage_cancer, get_prediction_percentage_diabetes, get_prediction_percentage_stroke
 
 
 @api_view(['GET'])
@@ -50,3 +50,19 @@ def newchat(request):
 @api_view(['GET'])
 def getchat(request, pk):
     return get__chat(pk)
+
+
+@api_view(['POST'])
+def postForm(request, diagnosis):
+    data = request.data['data']
+    print("data", data)
+    if diagnosis == 'asthma':
+        return get_response(get_prediction_percentage_asthma(data))
+    elif diagnosis == 'cancer':
+        return get_response(get_prediction_percentage_cancer(data))
+    elif diagnosis == 'diabetes':
+        return get_response(get_prediction_percentage_diabetes(data))
+    elif diagnosis == 'stroke':
+        return get_response(get_prediction_percentage_stroke(data))
+    else:
+        return get_response('Invalid diagnosis')

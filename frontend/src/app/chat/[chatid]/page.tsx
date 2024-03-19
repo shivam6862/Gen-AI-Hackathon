@@ -7,7 +7,6 @@ import GiveChatname from "@/components/GiveChatname";
 import Backdrop from "@/components/Backdrop";
 import useGetchatById from "@/hooks/useGetchatById";
 import useUpdatechatById from "@/hooks/useUpdatechatById";
-import SideBar from "@/components/Sidebar";
 
 type Props = {
   params: {
@@ -119,7 +118,6 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
 
   return (
     <div className={classes["container"]}>
-      <SideBar />
       <div className={classes["box"]}>
         {isvisibleUserChat && <Backdrop zIndex={70} />}
         <div className={classes["chat-name-form"]}>
