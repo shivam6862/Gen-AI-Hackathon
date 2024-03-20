@@ -1,5 +1,7 @@
 # Gen AI Hackathon
 
+## [Deploy](https://gen-ai-mech-hackathon.vercel.app/)
+
 ## Overview
 
 The Gen AI Hackathon project aims to utilize machine learning for healthcare by developing a web application that can detect various diseases such as asthma, cancer, diabetes, and stroke. The application provides real-time diagnosis based on predictive modeling. If a disease is detected, the user receives preventive measures and can engage in further conversation with a llm chatbot specialized in that disease.
@@ -43,6 +45,10 @@ The Gen AI Hackathon project aims to utilize machine learning for healthcare by 
 
 ![4](/image/4.png)
 
+![6](/image/6.png)
+
+![7](/image/7.png)
+
 ## Chat Page
 
 ![5](/image/5.png)
@@ -85,6 +91,12 @@ The Gen AI Hackathon project aims to utilize machine learning for healthcare by 
 
 5. Access the application at [port](http://localhost:3000)
 
+6. The finetuning is done on **Intel/Mistral-7B-v0.1-int4-inc**, the code for fine-tuning is written under medical_finetune.py. The file can be run using below command
+
+```bash
+python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
+```
+
 ## Contributors
 
 - [Sarvagya Porwal](https://github.com/Sar2580P)
@@ -92,3 +104,7 @@ The Gen AI Hackathon project aims to utilize machine learning for healthcare by 
 - [Puspendra Mahariya](https://github.com/silent-cipher)
 
 ## TEAMID -
+
+```
+
+```

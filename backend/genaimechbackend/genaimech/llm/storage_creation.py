@@ -164,5 +164,5 @@ class DocStore:
         return res.text
 
 
-A = DocStore()
-A.create_index()
+# A = DocStore()
+# A.create_index()

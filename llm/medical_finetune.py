@@ -1,4 +1,3 @@
-# falcon-tune.py
 import time
 import argparse
 
