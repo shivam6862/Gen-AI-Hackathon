@@ -33,13 +33,13 @@ from llama_index.core import VectorStoreIndex, get_response_synthesizer
 
 class DocStore:
     def __init__(self):
-        self.base_dir = 'llm/docs'
-        self.vector_store_dir = 'llm/vector_store'
+        self.base_dir = 'docs'
+        self.vector_store_dir = 'vector_store'
         if not os.path.exists(self.vector_store_dir):
             os.makedirs(self.vector_store_dir)
         self.index = None
         self.pipeline = None
-        print(Settings.llm , end = '\n\n\n\n')
+#        print(Settings.llm , end = '\n\n\n\n')
     def create_docs(self, file_name:str)->List[Document]:
         docs = []
         if file_name == 'links.txt':
@@ -82,13 +82,16 @@ class DocStore:
         return self.pipeline.run(documents=doc)
     
     def create_index(self)->VectorStoreIndex:
+
         # read all files in self.base_dir and create documents, then create nodes
         final_nodes = []
-        for file_name in os.listdir(self.base_dir):
-            docs = self.create_docs(file_name)
-            nodes = self.create_nodes(docs)
-            final_nodes.extend(nodes)
+	for file_name in os.listdir(self.base_dir):
+		docs = self.create_docs(file_name)
+		nodes = self.create_nodes(docs)
+		final_nodes.extend(nodes)
 
+	print(len(final_nodes))
+	print('&&&&&&&\n\n\n' , final_nodes[0] , end = '&&&&\n\n\n')
 
         db = chromadb.PersistentClient(path=self.vector_store_dir)
         chroma_collection = db.get_or_create_collection("quickstart")
@@ -156,10 +159,10 @@ class DocStore:
 
 # TODO : to create embeddings from Open-src model, not from gemini
 # TODO : need to enhance creation of index, to make searching more efficient
-# A = DocStore()
-# # A.create_index()
-# res = A.search_index('what is diabetes?')
-# print(res)
+A = DocStore()
+A.create_index()
+res = A.search_index('what is diabetes?')
+print(res)
 
 
                     

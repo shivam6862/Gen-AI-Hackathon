@@ -4,6 +4,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 from llama_index.llms.huggingface import HuggingFaceLLM
 from llama_index.core import PromptTemplate
+from transformers import AutoModelForCausalLM, AutoTokenizer, GPTQConfig, TrainingArguments
 
 def load_config(CONFIG_PATH):
   with open(CONFIG_PATH, 'r') as f:
@@ -27,13 +28,27 @@ query_wrapper_prompt = PromptTemplate(
     "### Instruction:\n{query_str}\n\n### Response:"
 )
 
+bnb_config = GPTQConfig(bits=4, disable_exllama=True)
+x = "Intel/Mistral-7B-v0.1-int4-inc"
+tokenizer = AutoTokenizer.from_pretrained(x)
+tokenizer.pad_token = tokenizer.eos_token
+
+model = AutoModelForCausalLM.from_pretrained(x,
+                                              quantization_config=bnb_config,
+                                              device_map="auto",
+                                              use_cache=False,
+                                              )
+
+
 llm = HuggingFaceLLM(
     context_window=2048,
     max_new_tokens=256,
+#	quantization_config=gptq_config,
     generate_kwargs={"temperature": 0.25, "do_sample": False},
     query_wrapper_prompt=query_wrapper_prompt,
-    tokenizer_name="Intel/neural-chat-7b-v3-1-int4-inc",
-    model_name="Intel/neural-chat-7b-v3-1-int4-inc",
+    tokenizer = tokenizer , 
+#    model_name="Intel/neural-chat-7b-v3-1-int4-inc", 
+model = model , 
     device_map="auto",
     tokenizer_kwargs={"max_length": 2048},
     # uncomment this if using CUDA to reduce memory usage
