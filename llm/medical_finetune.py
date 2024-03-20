@@ -9,18 +9,14 @@ from transformers import (
     AutoTokenizer,
     TrainingArguments)
 
-
-
 def main(FLAGS):
 
-    dataset = load_dataset("medalpaca/medical_meadow_wikidoc_patient_information", split="train")
+    dataset = load_dataset("heliosbrahma/mental_health_conversational_dataset", split="train")
 
-#    model_name = "Intel/neural-chat-7b-v3-1"
-    model_name = "Intel/Mistral-7B-v0.1-int4-inc-4bit-128g"
-#    model_name = "Intel/gpt-j-6B-int8-dynamic-inc"
+    model_name = "Intel/Mistral-7B-v0.1-int4-inc"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
-    model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True, from_tf = True)
+    model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
 
     print('setting training arguments')
 
@@ -41,23 +37,20 @@ def main(FLAGS):
         max_seq_length=FLAGS.max_seq_length,
         tokenizer=tokenizer,
         args=training_arguments,
-        packing=True,
+#        packing=True,
     )
 
-
     print('Starting Training')
-
     start = time.time()
 
     trainer.train()
 
     total = time.time() - start
-
     print(f'Time to tune {total}')
-    
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    
+
     parser.add_argument('-bf16',
                         '--bf16',
                         type=bool,
@@ -73,6 +66,6 @@ if __name__ == "__main__":
                         type=int,
                         default=512,
                         help="specifies the number of highest probability tokens to consider at each step")
-    
+
     FLAGS = parser.parse_args()
     main(FLAGS)
