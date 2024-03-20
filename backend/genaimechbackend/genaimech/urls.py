@@ -16,4 +16,7 @@ urlpatterns = [
 
     path('genaimech/signup/', views.signup, name="signup"),
     path('genaimech/signin/', views.signin, name="signin"),
+
+    path('genaimech/getprescription/',
+         views.getPrescription, name="getPrescription"),
 ]
