@@ -4,6 +4,7 @@ import classes from "@/styles/NegativeResult.module.css";
 import { useRouter, useParams, usePathname } from "next/navigation";
 import ChatBotContext from "@/contexts/ChatBot-context";
 import useCreateNewchat from "@/hooks/useCreateNewchat";
+import LoadingComponent from "./Loading";
 
 type messageType = {
   symptoms: string;
@@ -71,13 +72,26 @@ const NegativeResult = ({
       <div className={classes["message-box model"]}>
         <p>We pray for your health.</p>
       </div>
-      <button onClick={getPrescription} className={classes["prescription-btn"]}>
-        {showPrescription
-          ? "Hide Prescription"
-          : isLoading
-          ? "Getting..."
-          : "Get Prescription"}
-      </button>
+
+      {showPrescription ? (
+        <button
+          onClick={() => {
+            setShowPrescription(false);
+          }}
+          className={classes["prescription-btn"]}
+        >
+          Hide Prescription
+        </button>
+      ) : isLoading ? (
+        <LoadingComponent height="50px" />
+      ) : (
+        <button
+          onClick={getPrescription}
+          className={classes["prescription-btn"]}
+        >
+          Get Prescription
+        </button>
+      )}
 
       <div>
         {showPrescription && !isLoading && (
