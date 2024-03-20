@@ -30,15 +30,15 @@ const SideBar: React.FC = () => {
 
   return (
     <div
-      className={classes["container"]}
+      className={`${classes["container"]} ${
+        isSidebarOpen ? classes["slide-in"] : classes["slide-out"]
+      }`}
       style={{
         width: isSidebarOpen ? "250px" : "0px",
       }}
     >
       <div
-        className={`${classes["box"]} ${
-          isSidebarOpen ? classes["slide-in"] : classes["slide-out"]
-        }`}
+        className={`${classes["box"]}`}
         style={{
           display: isSidebarOpen ? "block" : "none",
         }}

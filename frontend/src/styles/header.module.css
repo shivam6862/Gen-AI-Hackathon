@@ -27,3 +27,12 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+.logout-button {
+  all: unset;
+  cursor: pointer;
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}

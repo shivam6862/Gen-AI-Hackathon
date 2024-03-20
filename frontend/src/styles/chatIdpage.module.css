@@ -98,6 +98,16 @@
 }
 .textarea-box {
   width: 91%;
+  position: relative;
+}
+
+.send-button {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .upload-files-box {
   width: auto;
@@ -105,7 +115,7 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-.left-chat-bottom > .textarea-box > textarea,
+/* .left-chat-bottom > .textarea-box > textarea,
 .right-chat-bottom > textarea {
   width: 100%;
   padding: 0.6rem 1rem;
@@ -135,6 +145,17 @@
 .left-chat-bottom > .textarea-box > textarea::placeholder,
 .right-chat-bottom > textarea::placeholder {
   color: #c9c9c9;
+} */
+.input-field {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-small-outset);
+  padding: 1rem;
+}
+.input-field,
+.input-field:focus {
+  border: none;
+  outline: none;
 }
 @media (max-width: 768px) {
   .box {

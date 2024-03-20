@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: center;
   width: 950px;
-  position: relative;
 }
 .top_description {
   display: flex;
@@ -21,9 +20,10 @@
   justify-content: center;
   align-items: center;
   background-color: var(--light-black-color);
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
   opacity: 0.8;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
   width: -webkit-fill-available;
+  position: relative;
 }
 .description_box {
   display: flex;
@@ -52,18 +52,17 @@
   align-items: center;
   background-color: var(--light-black-color);
   border-radius: 0rem 0rem 0.5rem 0.5rem;
-  opacity: 0.8;
   width: -webkit-fill-available;
   height: 100px;
   position: absolute;
-  top: 10.3rem;
+  top: 100%;
 }
 .bottom_form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-gray-color);
+  background-color: var(--white-color);
   border-radius: 0.5rem;
   width: 700px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,

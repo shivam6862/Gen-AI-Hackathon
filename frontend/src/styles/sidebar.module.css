@@ -38,10 +38,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--user-bg);
+  background: rgba(0, 0, 0, 0.1);
   height: 100%;
   width: -webkit-fill-available;
   padding: 0.1rem;
+  box-shadow: var(--box-shadow-larger-outset);
 }
 .new-chat {
   width: -webkit-fill-available;
@@ -53,7 +54,9 @@
 .new-chat:hover {
   background-color: var(--model-bg);
 }
-
+.toggle-sidebar {
+  animation: slide-in 0.5s forwards;
+}
 .toggle-sidebar > svg {
   color: var(--toogle-button-bg);
   font-size: 1.5rem;
@@ -68,7 +71,8 @@
   padding: 0.5rem;
   border-radius: var(--br-400);
   font-size: 0.9rem;
-  color: var(--message-color);
+  /* color: var(--message-color); */
+  color: var(--black-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

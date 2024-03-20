@@ -1,5 +1,9 @@
 import { useNotification } from "./useNotification";
 
+export type DiagnosisResultType = {
+  type: "Success" | "Error";
+  response: number[];
+};
 const useFormDiagnosis = () => {
   const { NotificationHandler } = useNotification();
   const FormDiagnosis = async (diagnosis: string, data: any) => {
@@ -15,7 +19,7 @@ const useFormDiagnosis = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ data }),
-        }
+        },
       );
       const responsedata = await response.json();
       console.log(responsedata);
@@ -25,6 +29,7 @@ const useFormDiagnosis = () => {
       }
       return {
         type: "Success",
+        response: responsedata.response[0],
       };
     } catch (err) {
       console.log(err);

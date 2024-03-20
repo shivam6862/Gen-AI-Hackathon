@@ -95,7 +95,7 @@ def signin(request):
     return user_signin(request)
 
 
-@api_view(['GET'])
+@api_view(['POST'])
 def getPrescription(request):
     diseases = request.data['diseases']
     return get_prescription(diseases)

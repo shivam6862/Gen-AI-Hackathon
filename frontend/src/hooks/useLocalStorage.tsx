@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-type StoredValue<T> = [T, (value: T) => void];
+type StoredValue<T> = [T, (value: T) => void, () => void];
 
 function useLocalStorage<T>(key: string, initialValue: T): StoredValue<T> {
   const readValue = (): T => {
@@ -34,7 +34,21 @@ function useLocalStorage<T>(key: string, initialValue: T): StoredValue<T> {
       console.warn(`Error setting localStorage key “${key}”:`, error);
     }
   };
-  return [storedValue, setValue];
+
+  const removeValue = () => {
+    if (typeof window == "undefined") {
+      console.warn(
+        `Tried removing localStorage key “${key}” even though environment is not a client`
+      );
+    }
+    try {
+      window.localStorage.removeItem(key);
+      window.dispatchEvent(new Event("local-storage"));
+    } catch (error) {
+      console.warn(`Error removing localStorage key “${key}”:`, error);
+    }
+  };
+  return [storedValue, setValue, removeValue];
 }
 
 export default useLocalStorage;

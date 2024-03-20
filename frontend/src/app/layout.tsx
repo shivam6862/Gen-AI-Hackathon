@@ -6,7 +6,6 @@ import Notifications from "@/components/notification/Notifications";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ChatBotContextProvider } from "@/contexts/ChatBot-context";
-import SideBar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +26,6 @@ export default function RootLayout({
         <NotificationContextProvider>
           <ChatBotContextProvider>
             <Notifications />
-            <SideBar />
             <Header />
             {children}
             <Footer />

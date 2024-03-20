@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import classes from "@/styles/chatIdpage.module.css";
 import CustomBotChat from "@/components/chat/CustomBotChat";
 import UploadFiles from "@/components/UploadFiles";
@@ -7,6 +7,8 @@ import GiveChatname from "@/components/GiveChatname";
 import Backdrop from "@/components/Backdrop";
 import useGetchatById from "@/hooks/useGetchatById";
 import useUpdatechatById from "@/hooks/useUpdatechatById";
+import { IoSend } from "react-icons/io5";
+import ChatBotContext from "@/contexts/ChatBot-context";
 
 type Props = {
   params: {
@@ -46,10 +48,12 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
   const [chat, setChat] = useState<Chat>([]);
   const [question, setQuestion] = useState<string>("");
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
+  const ctx = useContext(ChatBotContext);
 
   const [isvisibleUserChat, setIsvisibleUserChat] = useState<boolean>(false);
   const [chatsError, setChatsError] = useState<Newchat>({ name: "" });
   const [chatName, setChatName] = useState<Newchat>({ name: "" });
+  const [fill, setFill] = useState("#000");
 
   const handleInput = () => {
     const textarea = textareaRef.current;
@@ -82,7 +86,7 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
       ]);
     }
   };
-
+  console.log(ctx.sidebarData);
   const handleSetErrors = (id: string) => {
     if (id === "name") {
       if (chatName.name === "") {
@@ -102,6 +106,10 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
       setIsvisibleUserChat(true);
     }
   }, []);
+  useEffect(() => {
+    if (question.length > 0) setFill("#43b97f");
+    else setFill("#000");
+  }, [question]);
 
   useEffect(() => {
     const fun = async () => {
@@ -164,7 +172,22 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
                   }}
                   disabled={id === "new" ? true : false}
                 ></textarea>
+                <button
+                  className={classes["send-button"]}
+                  onClick={callBot}
+                  onKeyDown={(e) => {
+                    if (e.key == "Enter") callBot();
+                  }}
+                  disabled={id === "new" ? true : false}
+                >
+                  <IoSend
+                    className="transition duration-300"
+                    size={30}
+                    fill={fill}
+                  />
+                </button>
               </div>
+
               <div
                 className={classes["upload-files-box"]}
                 style={{

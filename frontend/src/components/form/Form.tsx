@@ -1,7 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import useFormDiagnosis from "@/hooks/useFormDiagnosis";
+import useFormDiagnosis, {
+  DiagnosisResultType,
+} from "@/hooks/useFormDiagnosis";
 import classes from "@/styles/form/form.module.css";
+import DiagnosisResult from "../DiagnosisResult";
 
 type Props = {
   formData: any;
@@ -17,6 +20,11 @@ const Form: React.FC<Props> = ({ formData, name }) => {
       return acc;
     }, {})
   );
+  const [diagnosisResult, setDiagnosisResult] = useState<DiagnosisResultType>({
+    type: "Success",
+    response: [],
+  });
+  const [toggleModal, setToggleModal] = useState(false);
 
   const handleSubmit = async (e: any) => {
     setIsLoading(true);
@@ -25,7 +33,12 @@ const Form: React.FC<Props> = ({ formData, name }) => {
       const values = Object.values(useFormData).map((value: any) =>
         parseInt(value)
       );
-      const response = await FormDiagnosis(name, values);
+      const response = (await FormDiagnosis(
+        name,
+        values
+      )) as DiagnosisResultType;
+      setDiagnosisResult(response);
+      setToggleModal(true);
       console.log(response);
       setIsLoading(false);
     } catch (err) {
@@ -38,9 +51,20 @@ const Form: React.FC<Props> = ({ formData, name }) => {
     const { name, value } = e.target;
     setUseFormData({ ...useFormData, [name]: value });
   };
+  const modalCloseHandler = () => {
+    setToggleModal(false);
+  };
 
   return (
     <div className={classes.container}>
+      {toggleModal && (
+        <DiagnosisResult
+          result={diagnosisResult}
+          onClose={modalCloseHandler}
+          useFormData={useFormData}
+          setUseFormData={setUseFormData}
+        />
+      )}
       <div className={classes.form_box}>
         <h1>Tell us about your diagnosis</h1>
         <form onSubmit={handleSubmit} className={classes.container_form}>
