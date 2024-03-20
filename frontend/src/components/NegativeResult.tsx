@@ -1,8 +1,6 @@
 import Markdown from "react-markdown";
 import { useState, useContext } from "react";
-import prescriptionData from "../../prescription.json";
 import classes from "@/styles/NegativeResult.module.css";
-import Link from "next/link";
 import { useRouter, useParams, usePathname } from "next/navigation";
 import ChatBotContext from "@/contexts/ChatBot-context";
 import useCreateNewchat from "@/hooks/useCreateNewchat";
