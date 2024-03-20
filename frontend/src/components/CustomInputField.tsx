@@ -13,7 +13,7 @@ type CustomInputFieldProps = {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => void;
   onBlur: () => void;
-  error: string;
+  error?: string;
   isInput: boolean;
 };
 

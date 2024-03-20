@@ -1,0 +1,18 @@
+.modal-container {
+    padding: 1.5rem;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.modal-header > h1 {
+    color: var(--primary-color);
+}
+.close-btn {
+    all: unset;
+    cursor: pointer;
+    transform: scaleX(1.2);
+    font-size: var(--ft-650);
+}

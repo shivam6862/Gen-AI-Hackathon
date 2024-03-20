@@ -25,8 +25,9 @@ const Page: React.FC<Props> = ({ params: { name } }) => {
               Please fill out the form below to tell us about your diagnosis.
             </p>
           </div>
+          <div className={classes.middle_background}></div>
         </div>
-        <div className={classes.middle_background}></div>
+
         <div className={classes.bottom_form}>
           <div className={classes.box_form}>
             <Form formData={foundItem ? foundItem[name] : {}} name={name} />

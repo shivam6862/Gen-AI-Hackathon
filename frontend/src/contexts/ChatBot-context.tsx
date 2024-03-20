@@ -44,8 +44,11 @@ export const ChatBotContextProvider: React.FC<Props> = (props) => {
 
   const onSetSidebarData = (value: string) => {
     const [id, title] = value.split("_");
-    const newSidebarData = sidebarData.concat({ title, id });
-    setSidebarData(newSidebarData);
+    console.log(value, "setting");
+    setSidebarData((prev) => {
+      prev.push({ title, id });
+      return [...prev];
+    });
   };
 
   const onsetSidebarArray = (value: string[]) => {

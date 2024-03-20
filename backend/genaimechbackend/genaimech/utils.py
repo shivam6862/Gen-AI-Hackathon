@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from .model.prediction import Model, get_predict_percentage_stroke, get_predict_percentage_diabetes, get_predict_percentage_cancer, get_predict_percentage_asthma
+from .llm.prescription import generate_prescription
 
 
 def get_response(data, status=200):
@@ -88,3 +89,10 @@ def get__chat(pk, status=200):
         'response': []
     }
     return Response(data, status=status)
+
+
+def get_prescription(diseases):
+    print("diseases", diseases)
+    response = generate_prescription(diseases)
+    print("response", response)
+    return Response(response, status=200)

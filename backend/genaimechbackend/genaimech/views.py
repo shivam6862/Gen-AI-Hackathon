@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .utils import get_response, post_response, post_chat, get_all_chat, new__chat, get__chat, get_prediction_percentage_asthma, get_prediction_percentage_cancer, get_prediction_percentage_diabetes, get_prediction_percentage_stroke
+from .utils import get_response, post_response, post_chat, get_all_chat, new__chat, get__chat, get_prediction_percentage_asthma, get_prediction_percentage_cancer, get_prediction_percentage_diabetes, get_prediction_percentage_stroke, get_prescription
 
 from .util.auth import insert_signup, user_signin
 
@@ -31,6 +31,8 @@ def getRoutes(request):
             'body': {'username': 'string', 'email': 'string', 'password': 'string'}, 'description': 'Creates a new user'},
         {'Endpoint': '/signin/', 'method': 'POST',
             'body': {'username': 'string', 'password': 'string'}, 'description': 'Signin a user'},
+        {'Endpoint': '/prescription/', 'method': 'GET',
+            'body': {'diseases': 'string'}, 'description': 'Returns a prescription for the diseases'}
     ]
     return Response(routes)
 
@@ -91,3 +93,9 @@ def signup(request):
 @api_view(['POST'])
 def signin(request):
     return user_signin(request)
+
+
+@api_view(['POST'])
+def getPrescription(request):
+    diseases = request.data['diseases']
+    return get_prescription(diseases)
