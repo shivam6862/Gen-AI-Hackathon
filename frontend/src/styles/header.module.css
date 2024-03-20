@@ -1,15 +1,29 @@
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   width: -webkit-fill-available;
   padding: 1rem;
   color: var(--white-color);
   background-color: rgba(67, 185, 127, 0.85);
 }
-.container > a > img {
+.home {
+  display: flex;
+  gap: 0.5rem;
+}
+.home > a > img {
   width: 38px;
   height: 38px;
   margin-right: 1rem;
   border-radius: 50%;
+}
+.links {
+  display: flex;
+  gap: 1rem;
+}
+.links > a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
 }

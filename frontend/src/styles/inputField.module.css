@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: -webkit-fill-available;
+}
+.box {
+  position: relative;
+  width: -webkit-fill-available;
+}
+.box > label {
+  position: absolute;
+  font-size: var(--ft-400);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--title-color);
+  background-color: var(--white-color);
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.box > input {
+  font-size: var(--ft-400);
+  outline: none;
+  border: 1px solid var(--black-color);
+  border-radius: var(--br-400);
+  padding: var(--pd-400) var(--pd-300);
+  color: var(--title-color);
+  transition: 0.1s ease-out;
+  width: -webkit-fill-available;
+}
+.box > input:focus {
+  border-color: var(--primary-color);
+}
+.box > input:focus + label {
+  color: var(--primary-color);
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.box > input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.box > label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.error {
+  color: var(--light-warn-color);
+}
