@@ -27,7 +27,6 @@ export default function Header() {
         <Link href="/account/signin">SignIn</Link>
         <Link href="/chat/new">Chat</Link>
         <Link href="/diagnosis">Diagnosis</Link>
-        <Link href="/form/cancer">Form</Link>
       </div>
     </div>
   );
