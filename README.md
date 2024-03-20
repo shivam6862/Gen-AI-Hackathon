@@ -23,6 +23,16 @@ The Gen AI Hackathon project aims to utilize machine learning for healthcare by 
 5. If a disease is detected, preventive measures are provided to the user.
 6. The user can engage in further conversation with a disease-specific llm chatbot on the chat page.
 
+## Unique Idea Brief
+
+We have worked on both aspects of the problem statement, i.e, Disease Diagnosis , treatment Recommendation.
+
+The disease diagnosis part consists of the identification of disease based on information received from user through form-filling. Then ML model specific to that disease is used for the diagnosis of the particular disease.
+
+The recommendation process plans out a detailed report regarding causes, symptoms, medical prescription and changes to be made in living style.
+
+There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), which can given guidance on general medical related questions.
+
 ## Workflow
 
 ![WorkFlow](/image/workflow.png)
