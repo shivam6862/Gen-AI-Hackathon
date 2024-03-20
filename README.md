@@ -35,7 +35,7 @@ There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), 
 
 ## Workflow
 
-![WorkFlow](/image/workflow.png)
+![WorkFlow](/image/WORKFLOW.png)
 
 ## Frontend
 
