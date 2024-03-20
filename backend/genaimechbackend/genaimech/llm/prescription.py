@@ -29,3 +29,18 @@ def generate_prescription(disease):
         'source': list(sources),
         'type': 'Success',
     }
+
+
+def chatbot(question):
+    template = '''
+You are a doctor. A patient comes to you with a complaint, you need to respond to the patient's complaint.
+
+Patient: {patient_complaint}
+
+answer in less than 200 words be precise and to the point.
+
+give in continuous text without any bullet points or numbering.
+'''
+    prompt = template.format(patient_complaint=question)
+    res = Settings.llm.complete(prompt)
+    return res.text

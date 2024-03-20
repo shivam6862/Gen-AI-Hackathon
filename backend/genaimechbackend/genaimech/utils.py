@@ -1,6 +1,7 @@
 from rest_framework.response import Response
 from .model.prediction import Model, get_predict_percentage_stroke, get_predict_percentage_diabetes, get_predict_percentage_cancer, get_predict_percentage_asthma
 from .llm.prescription import generate_prescription
+from .llm.prescription import chatbot
 
 
 def get_response(data, status=200):
@@ -53,8 +54,9 @@ def get_prediction_percentage_stroke(data_of_new_patient):
 
 def post_chat(message, status=201):
     try:
+        chat = chatbot(message)
         response = {
-            'response': "Account login issue, password problem",
+            'response': chat,
             'type': 'SUCCESS'
         }
         return Response(response, status=status)
