@@ -170,7 +170,6 @@ const Page: React.FC<Props> = ({ params: { chatid } }) => {
                   onChange={(e) => {
                     setQuestion(e.target.value);
                   }}
-                  disabled={id === "new" ? true : false}
                 ></textarea>
                 <button
                   className={classes["send-button"]}

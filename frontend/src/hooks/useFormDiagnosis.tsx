@@ -19,7 +19,7 @@ const useFormDiagnosis = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ data }),
-        },
+        }
       );
       const responsedata = await response.json();
       console.log(responsedata);

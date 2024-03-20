@@ -37,9 +37,11 @@ const Form: React.FC<Props> = ({ formData, name }) => {
         name,
         values
       )) as DiagnosisResultType;
-      setDiagnosisResult(response);
-      setToggleModal(true);
-      console.log(response);
+      if (response.type === "Success") {
+        setDiagnosisResult(response);
+        setToggleModal(true);
+        console.log(response);
+      }
       setIsLoading(false);
     } catch (err) {
       setIsLoading(false);
