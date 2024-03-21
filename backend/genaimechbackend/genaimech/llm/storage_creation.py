@@ -27,6 +27,7 @@ from llama_index.vector_stores.chroma import ChromaVectorStore
 from bs4 import BeautifulSoup
 sys.path.append(os.getcwd())
 
+
 class DocStore:
     def __init__(self):
         self.base_dir = 'genaimech/llm/docs'

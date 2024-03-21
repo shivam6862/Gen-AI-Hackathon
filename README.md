@@ -1,6 +1,8 @@
 # Gen AI Hackathon
 
-## [Deploy](https://gen-ai-mech-hackathon.vercel.app/)
+## Deploy
+
+- [Gen ai mech-hackathon.vercel](https://gen-ai-mech-hackathon.vercel.app/)
 
 ## Overview
 
@@ -33,9 +35,15 @@ The recommendation process plans out a detailed report regarding causes, symptom
 
 There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), which can given guidance on general medical related questions.
 
+## [Video](https://youtu.be/jwQfrptToTA)
+
+<video width="100%" height="100%" controls autoplay>
+  <source src="https://www.youtube.com/watch?v=jwQfrptToTA" type="video/mp4">
+</video>
+
 ## Workflow
 
-![WorkFlow](/image/workflow.png)
+![WorkFlow](/image/explain.png)
 
 ## Frontend
 
@@ -107,6 +115,18 @@ There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), 
 python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
 ```
 
+## Finetuning
+
+- [Dataset](https://huggingface.co/datasets/heliosbrahma/mental_health_conversational_dataset)
+- [Model for finetuning](https://huggingface.co/Intel/Mistral-7B-v0.1-int4-inc)
+
+## Kaggle dataset
+
+- [Diabetes](https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset)
+- [Asthma](https://www.kaggle.com/datasets/deepayanthakur/asthma-disease-prediction)
+- [Stroke](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
+- [Cancer](https://www.kaggle.com/datasets/mysarahmadbhat/lung-cancer)
+
 ## Contributors
 
 - [Sarvagya Porwal](https://github.com/Sar2580P)
@@ -116,5 +136,5 @@ python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
 ## TEAMID -
 
 ```
-
+   Team name - genaimech
 ```
