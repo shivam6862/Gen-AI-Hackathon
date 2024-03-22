@@ -9,6 +9,7 @@ body {
   background-color: var(--bg-primary);
   max-width: 1800px;
   margin: auto;
+  padding-top: 4rem;
 }
 a {
   display: block;

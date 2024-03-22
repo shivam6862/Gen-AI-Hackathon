@@ -10,8 +10,8 @@ export default function Home() {
   const { NotificationHandler } = useNotification();
   useEffect(() => {
     NotificationHandler(
-      "Gen Ai mech hackthon",
-      "Welcome to the hackthon",
+      "GenAiMech HealthCare",
+      "Welcome to the GenAiMech HealthCare. We are here to help you.",
       "Success"
     );
   }, []);

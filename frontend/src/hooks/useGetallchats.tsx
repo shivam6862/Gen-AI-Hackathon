@@ -16,13 +16,21 @@ const useGetallchats = () => {
       );
       const responsedata = await response.json();
       if (responsedata.type === "Error") {
-        NotificationHandler("Custom ChatBot", responsedata.message, "Error");
+        NotificationHandler(
+          "GenAiMech HealthCare",
+          responsedata.message,
+          "Error"
+        );
         return [];
       }
       return responsedata.response;
     } catch (err) {
       console.log(err);
-      NotificationHandler("Custom ChatBot", "Something went wrong", "Error");
+      NotificationHandler(
+        "GenAiMech HealthCare",
+        "Something went wrong",
+        "Error"
+      );
       return [];
     }
   };

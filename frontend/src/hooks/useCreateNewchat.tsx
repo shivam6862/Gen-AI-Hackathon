@@ -19,7 +19,11 @@ const useCreateNewchat = () => {
       const responsedata = await response.json();
       console.log(responsedata);
       if (responsedata.type === "Error") {
-        NotificationHandler("Custom ChatBot", responsedata.message, "Error");
+        NotificationHandler(
+          "GenAiMech HealthCare",
+          responsedata.message,
+          "Error"
+        );
         return "Error";
       }
       return {
@@ -28,7 +32,11 @@ const useCreateNewchat = () => {
       };
     } catch (err) {
       console.log(err);
-      NotificationHandler("Custom ChatBot", "Something went wrong", "Error");
+      NotificationHandler(
+        "GenAiMech HealthCare",
+        "Something went wrong",
+        "Error"
+      );
       return {
         type: "Error",
         chatName: "Something went wrong",
