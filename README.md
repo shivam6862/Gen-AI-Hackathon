@@ -120,6 +120,7 @@ python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
 
 - [Dataset](https://huggingface.co/datasets/heliosbrahma/mental_health_conversational_dataset)
 - [Model for finetuning](https://huggingface.co/Intel/Mistral-7B-v0.1-int4-inc)
+- [Check-points for Fine-tuned model](https://drive.google.com/drive/folders/13D68wowSkwtooYRJAfLYIQ3Q2T70F7hx)
 - scikit-learn-intelex
   - [sklearnex](https://pypi.org/project/scikit-learn-intelex/)
 
