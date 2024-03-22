@@ -68,3 +68,14 @@
   cursor: not-allowed;
   box-shadow: 0 0 1px var(--primary-color);
 }
+@media (max-width: 576px) {
+  .header > h1 {
+    font-size: 1.25rem;
+  }
+  .header > span > svg {
+    font-size: 1.25rem;
+  }
+  .container > button {
+    font-size: 0.9rem;
+  }
+}

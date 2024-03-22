@@ -102,10 +102,10 @@ There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), 
 
    ```bash
    HOST=
-    PROJECT_NAME=
-    DB_USERNAME=
-    PASSWORD=
-    SECRET_KEY=
+   PROJECT_NAME=
+   DB_USERNAME=
+   PASSWORD=
+   SECRET_KEY=
    ```
 
 5. Access the application at [port](http://localhost:3000)
@@ -139,5 +139,5 @@ python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
 ## TEAMID -
 
 ```
-   Team name - genaimech
+Team name - genaimech
 ```
