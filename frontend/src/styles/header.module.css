@@ -1,38 +1,186 @@
-.container {
+.header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: -webkit-fill-available;
-  padding: 1rem;
-  color: var(--white-color);
-  background-color: rgba(67, 185, 127, 0.85);
+  padding: 0.5rem 2rem;
+  gap: 2rem;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-width: 1800px;
+  margin: auto;
 }
-.home {
-  display: flex;
-  gap: 0.5rem;
+.header_background {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    77deg,
+    rgba(20, 21, 28, 0.6) 0%,
+    rgba(41, 44, 51, 0.6) 100%
+  );
+  backdrop-filter: blur(25px);
 }
-.home > a > img {
-  width: 38px;
-  height: 38px;
-  margin-right: 1rem;
+.line1,
+.line2,
+.line3 {
+  width: 20px;
+  height: 2px;
+  background: white;
+  margin: 4px 2px;
+  transition: all 0.5s;
+}
+.hamburgerchange .line1 {
+  transform: rotate(-405deg) translate(-4.28px, 4.28px);
+  background: white;
+}
+.hamburgerchange .line2 {
+  opacity: 0;
+}
+.hamburgerchange .line3 {
+  transform: rotate(405deg) translate(-4.28px, -4.28px);
+  background: white;
+}
+.hamburgerchange {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
   border-radius: 50%;
-}
-.links {
-  display: flex;
-  gap: 1rem;
-}
-.links > a {
-  color: var(--white-color);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.logout-button {
-  all: unset;
+  background-color: var(--background-color-hamburger);
   cursor: pointer;
-  color: var(--white-color);
-  text-decoration: none;
-  font-size: 1.2rem;
+  transition: background-color 0.2s ease-in-out;
+  display: none;
+}
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--background-color-hamburger);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: none;
+}
+.left_logo {
+  width: auto;
+}
+.left_logo > a > img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+.right_Navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  text-transform: capitalize;
+  padding: 0.5rem;
+}
+.right_Navigation > a {
+  all: unset;
+  font-size: 1.25rem;
   font-weight: 500;
+  color: var(--white-color);
+  cursor: pointer;
+}
+.right_Navigation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--primary-color);
+  scale: var(--width-navbar, 4%) 1;
+  translate: var(--left-navbar, 0px) 0;
+  transform-origin: left;
+  transition: 0.2s;
+}
+.contactlogos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  cursor: pointer;
+  display: none;
+}
+.contactlogos > h1 {
+  font-size: 1rem;
+  color: var(--white-color);
+}
+@media screen and (max-width: 620px) {
+  .hamburger {
+    display: block;
+    z-index: 210;
+  }
+  .hamburgerchange {
+    display: block;
+    z-index: 310;
+  }
+}
+@media screen and (max-width: 620px) {
+  .right_Navigation_Collapsed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    z-index: 210;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-transform: capitalize;
+    padding: 2rem;
+  }
+  .right_Navigation_Collapsed > a {
+    all: unset;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .right_Navigation {
+    display: none;
+  }
+  .header {
+    max-width: 100vw;
+  }
+  .contactlogos {
+    display: flex;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 1rem 3rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .left_logo > img {
+    display: none;
+  }
+  .right_Navigation_Collapsed {
+    font-size: 1rem;
+  }
 }

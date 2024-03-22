@@ -33,7 +33,7 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
       );
       if (invalidFiles.length > 0) {
         NotificationHandler(
-          "Custom ChatBot",
+          "GenAiMech HealthCare",
           "Only .jpg, .jpeg, .png, .pdf files are allowed",
           "Error"
         );
@@ -54,7 +54,7 @@ const UploadFiles: React.FC<UploadFilesProps> = ({
     const totalSizeInMB: number = totalSize / 1024 / 1024;
     if (totalSizeInMB > 2) {
       NotificationHandler(
-        "Custom ChatBot",
+        "GenAiMech HealthCare",
         "File size should be less than 2MB",
         "Error"
       );

@@ -92,12 +92,13 @@ There is a LLM based chat-doctor finetuned on dataset (link mentioned at last), 
 
    ```bash
    cd backend
+   python -m venv env [for windows]
    pip install -r requirements.txt
    cd genaimechbackend
    python manage.py runserver
    ```
 
-4. Give .env in `backend\genaimechbackend\genaimechbackend\.env`
+4. Give .env in `backend/genaimechbackend/genaimechbackend/.env`
 
    ```bash
    HOST=
@@ -119,6 +120,8 @@ python medical_finetune.py --bf16 True --use_ipex True --max_seq_length 512
 
 - [Dataset](https://huggingface.co/datasets/heliosbrahma/mental_health_conversational_dataset)
 - [Model for finetuning](https://huggingface.co/Intel/Mistral-7B-v0.1-int4-inc)
+- scikit-learn-intelex
+  - [sklearnex](https://pypi.org/project/scikit-learn-intelex/)
 
 ## Kaggle dataset
 
