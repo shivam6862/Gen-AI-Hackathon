@@ -20,7 +20,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(50vw, 500px);
+  width: 500px;
   box-shadow: var(--box-shadow-small-outset);
   border-radius: 10px;
   z-index: 100;
@@ -177,5 +177,17 @@
   }
   .upload-files-box {
     padding: 0rem 1rem;
+  }
+  .chat-name-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    font-size: 0.7rem;
+  }
+  .chat-name-form {
+    width: 90%;
   }
 }
