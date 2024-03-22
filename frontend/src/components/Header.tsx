@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import useLocalStorage from "@/hooks/useLocalStorage";
 
 const Header = () => {
-  const [isNavCollapsed, setIsNavCollapsed] = useState<boolean>(true);
+  const [isNavCollapsed, setIsNavCollapsed] = useState<boolean>(false);
   const [currentNav, setCurrentNav] = useState<number>(0);
   const [windowWidth, setWindowWidth] = useState<number>(0);
   const navref = useRef<HTMLDivElement | any>(null);
